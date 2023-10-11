@@ -1,0 +1,125 @@
+.HeroSection{
+    padding: 20px 30px 20px 30px;
+    display: grid;
+    grid-template-columns: 40vw 51vw;
+    grid-template-rows: auto ;
+    background-color: #495E57;
+    column-gap: 4vw;
+    }
+    .HeroImgContainer{
+    grid-column-start:2;
+    grid-column-end:3;
+    }
+    .HeroImg{
+    margin-top: 20px;
+    height: 90%;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    }
+    .heroTitleContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    }
+    #HeroTitle{
+     font-size: 6.5em;
+     padding: 0px;
+     margin: 0px;
+     font-family: 'Markazi Text','Times New Roman', Times, serif;
+     font-weight: 700;
+    }
+    .heroSubTitle{
+     font-size: 3em;
+     font-family: 'Markazi Text','Times New Roman', Times, serif;
+     font-weight: 600;
+     padding: 0px;
+     margin: 0px;
+    }
+    .heroDescription{
+     font-size: 1.5em;
+     font-family: 'karla','Times New Roman', Times;
+     font-weight: 500;
+     max-width: 600px;
+     line-height:1.2em ;
+     margin-top: 8px;
+     font-weight: 400;
+    }
+    .ReserveButton{
+     width:200px;
+     height: 50px;
+     background-color: #000000;
+     color: whitesmoke;
+     font-size: 1em;
+     border: none;
+     border-radius: 10px;
+    }
+
+    @media screen and (max-width:1200px) {
+        #HeroTitle{
+            font-size: 5.5em;
+            margin: 0px;
+            font-family: 'Markazi Text','Times New Roman', Times, serif;
+            font-weight: 700;
+           }
+           .heroSubTitle{
+            font-size: 1.8em;
+            font-family: 'Markazi Text','Times New Roman', Times, serif;
+            font-weight: 600;
+            margin: 0px;
+           }
+           .heroDescription{
+            font-size: 1.3em;
+            font-family: 'karla','Times New Roman', Times;
+            font-weight: 500;
+            max-width: 600px;
+            line-height:1.2em ;
+            margin-top: 8px;
+            font-weight: 400;
+           }
+           .HeroImg{
+            margin-top: 40px;
+            height: 80%;
+            width: 96%;
+            border: none;
+            border-radius: 20px;
+            }
+    }
+    
+    @media screen and (max-width:1000px) {
+        #HeroTitle{
+            font-size: 4.5em;
+           }
+           .HeroImg{
+            margin-top: 50px;
+            height: 80%;
+            width: 94%;
+            border: none;
+            border-radius: 20px;
+            }
+    }
+    
+    @media screen and (max-width:800px) {
+        .HeroSection{
+            display: flex;
+            flex-direction:column-reverse;
+            }
+            .heroTitleContainer{
+            margin-top: 3vh;
+            }
+        #HeroTitle{
+            font-size: 5.5em;
+           }
+           .HeroImg{
+            margin-top: 30px;
+            height: 90%;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            }
+    }
+    @media screen and (max-width:600px) {
+        #HeroTitle{
+            font-size: 4em;
+           }
+        }

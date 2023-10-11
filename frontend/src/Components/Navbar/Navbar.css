@@ -1,0 +1,76 @@
+nav{
+    margin-right: 0px;
+    width: 55vw;
+}
+.navbar-items-wraper{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.Burger-items-wraper{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    list-style:none;
+}
+.navbar-Item{
+font-size: 1em;
+margin-right: 5px;
+}
+.Burger-Item{
+    font-family: 'karla','Times New Roman', Times;
+    align-self: center;
+    font-size: 1.4em;
+    margin-top: 20px;
+}
+
+.Burger-Item:hover{
+  color: rgb(228, 228, 126);
+}
+.Burger-Itemlink{
+    text-decoration: none;
+    color: blueviolet;
+}
+.Burger-Itemlink:visited{
+    cursor: pointer;
+  color: rgb(22, 111, 4);
+}
+.burgerButton{
+height: 40px;
+width: 40px;
+padding: 0px;
+background-color:rgb(244, 248, 251);
+border: none;
+}
+.burgerbImage{
+border: none;
+border-radius: 10px;
+height: 90%;
+width: 90%;
+}
+.deleteImage{
+    border: none;
+    border-radius: 5px;
+    height: 80%;
+    width: 80%;
+}
+@media  screen and (max-width:1000px) {
+.navbar-Item{
+    font-size: 0.9em;
+}
+}
+
+@media screen and (max-width: 800px) {
+    nav{
+        margin-right: 0px;
+        width: 30vw;
+    }
+    .burgerButton{
+        position: relative;
+        left:23vw;
+        top:0px
+        }
+}
+
+
+

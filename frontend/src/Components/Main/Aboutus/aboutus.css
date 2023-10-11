@@ -1,0 +1,131 @@
+.aboutusSection{
+ display: grid;
+ grid-template-columns: auto auto;
+ grid-template-rows: auto 70vh;
+ background-color: #FFFFFF;
+}
+#aboutusID{
+    grid-column: span 2;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0px;
+}
+.aboutusText{
+    justify-self: center;
+    align-self: center;
+    padding: 20px;
+}
+
+.aboutusLogo{
+    font-size: 4em;
+    font-family: 'Markazi Text','Times New Roman', Times, serif;
+    font-weight: 600;
+    padding: 0px;
+    margin: 0px 0px 0px 10px;
+}
+
+.aboutusLocation{
+    font-size: 2.5em;
+    font-family: 'Markazi Text','Times New Roman', Times, serif;
+    font-weight: 600;
+    padding: 0px;
+    margin: 0px 0px 20px 10px;
+}
+.aboutusDescription{
+    font-family: 'karla','Times New Roman', Times;
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 23px;
+    margin: 3px 10px 0px 15px;
+    max-width: 40vw;
+}
+
+.aboutusimage{
+  margin-top: 80px;
+  height: 75%;
+  border:none;
+  border-radius: 10px;
+}
+
+@media  screen and (max-width:1000px) {
+
+    .aboutusLogo{
+        font-size: 3.6em;
+    }
+    .aboutusLocation{
+        font-size: 2.3em;
+    }
+    .aboutusDescription{
+        font-size: 1.1em;
+    }
+    .aboutusimage{
+        margin-top: 90px;
+        height: 63%;
+      }
+}
+@media  screen and (max-width:850px) {
+
+    .aboutusSection{
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto auto;
+       }
+    .aboutusText{
+       grid-column: span 2;
+       width: 80vw ;
+       }
+       .aboutusLogo{
+        font-size: 2.7em;
+    }
+    .aboutusLocation{
+        font-size: 1.9em;
+    }
+       .aboutusDescription{
+        font-size: 1.2em;
+        max-width: 80vw;
+    }
+    .aboutusImageContanier{
+        margin-top: 30px;
+        grid-column: span 2;
+        height:50vh;
+        width: 450px;
+        justify-self: center;
+       }
+       .aboutusimage{
+        margin-top: 0px;
+        height: 96%;
+        width: 100%;
+      }
+}
+
+@media screen and (max-width:600px){
+    .aboutusSection{
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto auto;
+        justify-content: center;
+       }
+
+     #aboutusID{
+     font-size: 2.7em;
+     }
+    .aboutusLogo{
+        font-size: 2.6em;
+    }
+    .aboutusLocation{
+        font-size: 2em;
+    }
+    .aboutusDescription{
+        font-size: 1em;
+    }
+    .aboutusImageContanier{
+        margin-top: 30px;
+        grid-column: span 2;
+        height:40vh;
+        width: 100%;
+        justify-self: center;
+       }
+    .aboutusimage{
+        margin-left: 3px;
+        height: 80%;
+        width: 98%;
+}
+}

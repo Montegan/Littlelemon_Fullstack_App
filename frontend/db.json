@@ -1,0 +1,230 @@
+{
+  "userData": [
+    {
+      "Date": "2023-10-01",
+      "Time": "17:00",
+      "GuestNumber": "3",
+      "Occasion": "Anniversary",
+      "freeTime": [
+        "18:00",
+        "19:00",
+        "20:00",
+        "21:00",
+        "22:00"
+      ],
+      "id": 1
+    },
+    {
+      "Date": "2023-10-01",
+      "Time": "19:00",
+      "GuestNumber": "3",
+      "Occasion": "Anniversary",
+      "freeTime": [
+        "18:00",
+        "20:00",
+        "21:00",
+        "22:00"
+      ],
+      "id": 2
+    },
+    {
+      "Date": "2023-10-01",
+      "Time": "20:00",
+      "GuestNumber": "3",
+      "Occasion": "Anniversary",
+      "freeTime": [
+        "18:00",
+        "21:00",
+        "22:00"
+      ],
+      "id": 3
+    },
+    {
+      "Date": "2023-10-04",
+      "Time": "20:00",
+      "GuestNumber": "2",
+      "Occasion": "",
+      "freeTime": [
+        "17:00",
+        "18:00",
+        "19:00",
+        "21:00",
+        "22:00"
+      ],
+      "id": 4
+    },
+    {
+      "Date": "2023-10-01",
+      "Time": "22:00",
+      "GuestNumber": "1",
+      "Occasion": "Anniversary",
+      "freeTime": [
+        "18:00",
+        "21:00"
+      ],
+      "id": 5
+    },
+    {
+      "Date": "2023-10-04",
+      "Time": "18:00",
+      "GuestNumber": "1",
+      "Occasion": "Anniversary",
+      "freeTime": [
+        "17:00",
+        "19:00",
+        "21:00",
+        "22:00"
+      ],
+      "id": 6
+    },
+    {
+      "Date": "2023-10-04",
+      "Time": "21:00",
+      "GuestNumber": "1",
+      "Occasion": "Anniversary",
+      "freeTime": [
+        "17:00",
+        "19:00",
+        "22:00"
+      ],
+      "id": 7
+    },
+    {
+      "Date": "2023-10-01",
+      "Time": "21:00",
+      "GuestNumber": "2",
+      "Occasion": "Graduation",
+      "freeTime": [
+        "18:00"
+      ],
+      "id": 8
+    },
+    {
+      "Date": "2023-10-01",
+      "Time": "18:00",
+      "GuestNumber": "3",
+      "Occasion": "",
+      "freeTime": [],
+      "id": 9
+    },
+    {
+      "Date": "2023-10-04",
+      "Time": "22:00",
+      "GuestNumber": "8",
+      "Occasion": "",
+      "freeTime": [
+        "17:00",
+        "19:00"
+      ],
+      "id": 10
+    },
+    {
+      "Date": "2023-10-03",
+      "Time": "19:00",
+      "GuestNumber": "3",
+      "Occasion": "Anniversary",
+      "freeTime": [
+        "17:00",
+        "18:00",
+        "20:00",
+        "21:00",
+        "22:00"
+      ],
+      "id": 11
+    },
+    {
+      "Date": "2023-10-03",
+      "Time": "17:00",
+      "GuestNumber": "3",
+      "Occasion": "Anniversary",
+      "freeTime": [
+        "18:00",
+        "19:00",
+        "20:00",
+        "21:00",
+        "22:00"
+      ],
+      "id": 12
+    },
+    {
+      "Date": "2023-10-03",
+      "Time": "18:00",
+      "GuestNumber": "2",
+      "Occasion": "Anniversary",
+      "freeTime": [
+        "19:00",
+        "20:00",
+        "21:00",
+        "22:00"
+      ],
+      "id": 13
+    },
+    {
+      "Date": "2023-10-03",
+      "Time": "20:00",
+      "GuestNumber": "2",
+      "Occasion": "Anniversary",
+      "freeTime": [
+        "19:00",
+        "21:00",
+        "22:00"
+      ],
+      "id": 14
+    },
+    {
+      "Date": "2023-10-02",
+      "Time": "18:00",
+      "GuestNumber": "2",
+      "Occasion": "Date Night",
+      "freeTime": [
+        "17:00",
+        "19:00",
+        "20:00",
+        "21:00",
+        "22:00"
+      ],
+      "id": 15
+    },
+    {
+      "Date": "2023-10-06",
+      "Time": "19:00",
+      "GuestNumber": "4",
+      "Occasion": "Anniversary",
+      "freeTime": [
+        "17:00",
+        "18:00",
+        "20:00",
+        "21:00",
+        "22:00"
+      ],
+      "id": 16
+    },
+    {
+      "Date": "2023-10-02",
+      "Time": "22:00",
+      "GuestNumber": "4",
+      "Occasion": "Graduation",
+      "freeTime": [
+        "17:00",
+        "19:00",
+        "20:00",
+        "21:00"
+      ],
+      "id": 17
+    },
+    {
+      "Date": "2023-10-10",
+      "Time": "19:00",
+      "GuestNumber": "4",
+      "Occasion": "Date Night",
+      "freeTime": [
+        "17:00",
+        "18:00",
+        "20:00",
+        "21:00",
+        "22:00"
+      ],
+      "id": 18
+    }
+  ]
+}

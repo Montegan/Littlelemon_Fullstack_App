@@ -1,0 +1,7 @@
+.ConfirmedMessage{
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top:20%;
+    font-size: 6rem;
+}

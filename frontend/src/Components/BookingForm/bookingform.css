@@ -1,0 +1,100 @@
+
+.bookingfromBiner{
+    display: flex;
+    flex-direction: column;
+    background-color: #F4CE14;
+}
+
+.BookingHeader{
+    align-self: center;
+    font-size: 4em;
+    font-family: 'Markazi Text','Times New Roman', Times, serif;
+   text-decoration: underline;
+}
+.formContainer{
+    height:70vh;
+    margin-bottom: 0px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 20px;
+    padding-bottom: 40px;
+
+}
+.formFieldswraper{
+ display: flex;
+ flex-direction: column;
+ 
+ font-family: 'Markazi Text','Times New Roman', Times, serif;
+ font-size: 2em;
+}
+
+
+.Datefield{
+    margin-top: 20px;
+    padding: 10px;
+    width: 30vw;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.6em;
+    font-family: 'karla','Times New Roman', Times;
+}
+
+::-webkit-datetime-edit-text { padding: 0px 2rem; }
+::-webkit-datetime-edit-month-field { text-transform: uppercase; }
+::-webkit-datetime-edit-day-field { text-transform: uppercase; }
+::-webkit-datetime-edit-year-field { text-transform: uppercase; }
+
+.Timefield{
+    margin-top: 20px;
+    padding: 10px;
+    width: 30vw;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.6em;
+    font-family: 'karla','Times New Roman', Times;
+}
+.Guestfield{
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 30vw;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.8em;
+    font-family: 'karla','Times New Roman', Times;
+}
+
+.Occasionfield{
+    margin-top: 20px;
+    padding: 10px;
+    width: 30vw;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.7em;
+    font-family: 'karla','Times New Roman', Times;
+}
+
+.formFieldswraper>input:hover{
+    background-color: rgb(243, 243, 224);
+}
+.formFieldswraper>select:hover{
+    background-color: rgb(243, 243, 224);
+}
+.submitReservation{
+    grid-column: span 2;
+    width:200px;
+    height: 55px;
+    background-color: #000000;
+    color: whitesmoke;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    }

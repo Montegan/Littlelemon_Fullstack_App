@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import { Inputshcema } from "../Components/schema/Inputshcema";
 import Header from "../Components/Header/Header";
 import "./registration.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 function Register() {
   const navigate = useNavigate();
@@ -129,6 +129,10 @@ function Register() {
             Register
           </button>
         </form>
+        <span style={{fontSize:"20px"}}>Have an acoount?
+        <Link  to={"/loginpage"}> login </Link>
+        instead
+        </span>
       </div>
     </>
   );

@@ -15,7 +15,7 @@ function App() {
   const [formdata, setformData] = useState([]);
   const [submitted, setSubmitted] = useState(false);
   const [clicked, setClicked] = useState(false);
-  
+  const [loggedin,setLoggedin]=useState(false);
 
   useEffect(() => {
     axios
@@ -30,7 +30,7 @@ function App() {
   }, [clicked]);
 
   const Change_time = (TimeList, action) => {
-    const selectedDate =  formdata.filter(
+    const selectedDate = formdata.filter(
       (items) => action.payload === items.Date
     );
     console.log(selectedDate);
@@ -76,7 +76,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={loggedin ? <Homepage /> : <Register/>} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route
@@ -97,7 +97,8 @@ function App() {
         <Route path="/Confirmed" element={<ConfirmedBooking />} />
         <Route path="/Fullmenu" element={<Fullmenu />} />
         <Route path="/Register" element={<Register />} />
-        <Route path="/loginpage" element={<Login />} />
+        <Route path="/loginpage" element={<Login loggedin={loggedin}
+              setLoggedin={setLoggedin}  />} />
       </Routes>
     </>
   );

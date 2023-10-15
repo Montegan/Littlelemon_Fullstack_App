@@ -9,3 +9,11 @@ export const Inputshcema = yup.object().shape({
   confirmPassword:yup.string().oneOf([yup.ref("password"),null], "password didn't match").required("required"),
   telephone: yup.string().required("Phone required")
 });
+
+export const LogInshcema = yup.object().shape({
+  name: yup.string().required("Name required"),
+  email: yup.string().email("invalid email").required("Email required"),
+  password: yup
+    .string().matches(passcheck,{message:"Please insert a strong password"})
+    .required("password required")
+});

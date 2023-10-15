@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
-import { Inputshcema } from "../Components/schema/Inputshcema";
+import { LogInshcema } from "../Components/schema/Inputshcema";
 import Header from "../Components/Header/Header";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "./registration.css";
-function Login() {
-  const onSubmit = async (values,actions) => {
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-    console.log(values);
-    actions.resetForm();
+function Login({loggedin,setLoggedin}) {
+  const [loginstatus, setloginStatus] = useState("");
+  const navigate = useNavigate();
+  const onSubmit = async(values, actions) => {
+    axios
+      .post("http://localhost:4000/users", values)
+      .then((res) => {
+        if ("Success" === res.data.message) {
+          setloginStatus(res.data.message);
+          setLoggedin(true)
+          actions.resetForm();
+          navigate("/");
+        } else if ("Failed" === res.data.message) {
+          setloginStatus("Login not succeful, Please check your credentials");
+        }
+      })
+      .catch((err) => console.log(err));
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
+    // console.log(values);
   };
   const {
     values,
@@ -22,70 +38,72 @@ function Login() {
       name: "",
       email: "",
       password: "",
-      confirmPassword: "",
-      telephone: "",
     },
-    validationSchema: Inputshcema,
+    validationSchema: LogInshcema,
     onSubmit,
   });
   console.log(errors);
   return (
     <>
-    <Header/>
-    <div className="RegisterContainer">
-      <h1 className="registerheader">Log in</h1>
-      <form className="formWraper" onSubmit={handleSubmit} autoComplete="off">
-        <div className="inputContainer">
-          <label htmlFor="name">Name :</label>
-          <input
-            id="name"
-            value={values.name}
-            onBlur={handleBlur}
-            onChange={handleChange}
-            type="text"
-          />
-          {errors.name && touched.name ? (
-            <span className="inupt-failed">{errors.name}</span>
-          ) : (
-            ""
-          )}
-        </div>
-        <div className="inputContainer">
-          <label htmlFor="email">Email :</label>
-          <input
-            id="email"
-            value={values.email}
-            onBlur={handleBlur}
-            onChange={handleChange}
-            type="email"
-          />
-          {errors.email && touched.email ? (
-            <span className="inupt-failed">{errors.email}</span>
-          ) : (
-            ""
-          )}
-        </div>
+      <div className="RegisterContainer">
+        {loginstatus}
+        <h1 className="registerheader">Log in</h1>
+        <form className="formWraper" onSubmit={handleSubmit} autoComplete="off">
+          <div className="inputContainer">
+            <label htmlFor="name">Name :</label>
+            <input
+              id="name"
+              value={values.name}
+              onBlur={handleBlur}
+              onChange={handleChange}
+              type="text"
+            />
+            {errors.name && touched.name ? (
+              <span className="inupt-failed">{errors.name}</span>
+            ) : (
+              ""
+            )}
+          </div>
+          <div className="inputContainer">
+            <label htmlFor="email">Email :</label>
+            <input
+              id="email"
+              value={values.email}
+              onBlur={handleBlur}
+              onChange={handleChange}
+              type="email"
+            />
+            {errors.email && touched.email ? (
+              <span className="inupt-failed">{errors.email}</span>
+            ) : (
+              ""
+            )}
+          </div>
 
-        <div className="inputContainer">
-          <label htmlFor="password">password :</label>
-          <input
-            id="password"
-            type="password"
-            value={values.password}
-            onBlur={handleBlur}
-            onChange={handleChange}
-          />
-          {errors.password && touched.password ? (
-            <span className="inupt-failed">{errors.password}</span>
-          ) : (
-            ""
-          )}
-        </div>
-        <button className="registerButton" disabled={isSubmitting} type="submit">
-        Register
-        </button>
-      </form>
-    </div>
+          <div className="inputContainer">
+            <label htmlFor="password">password :</label>
+            <input
+              id="password"
+              type="password"
+              value={values.password}
+              onBlur={handleBlur}
+              onChange={handleChange}
+            />
+            {errors.password && touched.password ? (
+              <span className="inupt-failed">{errors.password}</span>
+            ) : (
+              ""
+            )}
+          </div>
+          <button
+            className="registerButton"
+            disabled={isSubmitting}
+            type="submit"
+          >
+            Login
+          </button>
+        </form>
+      </div>
     </>
   );
 }

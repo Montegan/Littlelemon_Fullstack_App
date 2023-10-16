@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-function Navbar() {
+function Navbar({firstLoad}) {
+
+  const [clicked,setClicked]=useState(false)
+  const handleClick=()=>{
+    setClicked(!clicked)
+  }
   return (
     <>
+    {firstLoad ? <ul className='navbar-items-wraper'>
+        <li className= 'navbar-Item' onClick={handleClick}  >Home</li>
+        <li className='navbar-Item' onClick={handleClick} >Menu</li>
+        <li className='navbar-Item' onClick={handleClick} >ContactUs</li>
+        <li className='navbar-Item' onClick={handleClick}>Reservations </li>
+        <li className='navbar-Item' onClick={handleClick} >Aboutus  </li>
+        <li className='navbar-Item'><Link to='/Register' className='navbar-Itemlink' >Login/sinup</Link> </li>
+        <span className={clicked ? "showHidden" : "hideDisplay" }>Please,Login or register first</span>
+    </ul>:
     <ul className='navbar-items-wraper'>
-        <li className='navbar-Item'><Link to='/'>Home</Link></li>
-        <li className='navbar-Item'><Link to='/Fullmenu' >Menu</Link></li>
-        <li className='navbar-Item'><Link to='/ContactUs' >ContactUs</Link></li>
-        <li className='navbar-Item'><Link to='/Reservetable' >Reservations</Link> </li>
-        <li className='navbar-Item'><Link to='/AboutUs'>Aboutus</Link>  </li>
-        <li className='navbar-Item'><Link to='/Register'>Login/sinup</Link>  </li>
-    </ul>
+        <li className='navbar-Item'><Link to='/' className='navbar-Itemlink'>Home</Link></li>
+        <li className='navbar-Item'><Link to='/Fullmenu' className='navbar-Itemlink' >Menu</Link></li>
+        <li className='navbar-Item'><Link to='/ContactUs' className='navbar-Itemlink' >ContactUs</Link></li>
+        <li className='navbar-Item'><Link to='/Reservetable' className='navbar-Itemlink' >Reservations</Link> </li>
+        <li className='navbar-Item'><Link to='/AboutUs' className='navbar-Itemlink'>Aboutus</Link>  </li>
+        <li className='navbar-Item'><Link to='/Register' className='navbar-Itemlink' >Login/sinup</Link>  </li>
+    </ul>}
     </>
   )
 }

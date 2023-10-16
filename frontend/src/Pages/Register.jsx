@@ -39,7 +39,7 @@ function Register() {
   console.log(errors);
   return (
     <>
-      <Header />
+      <Header firstLoad="fromregister" />
       <div className="RegisterContainer">
         <h1 className="registerheader">Registers</h1>
         <form className="formWraper" onSubmit={handleSubmit} autoComplete="off">

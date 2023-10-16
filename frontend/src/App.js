@@ -10,6 +10,7 @@ import Register from "./Pages/Register";
 import { useState, useReducer, useEffect } from "react";
 import ConfirmedBooking from "./Components/ConfirmedBooking/ConfirmedBooking";
 import axios from "axios";
+import MiniHomepage from "./Pages/MiniHomepage";
 
 function App() {
   const [formdata, setformData] = useState([]);
@@ -76,7 +77,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={loggedin ? <Homepage /> : <Register/>} />
+        <Route path="/" element= {<MiniHomepage/>} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route

@@ -1,7 +1,7 @@
 .HeroSection{
     padding: 20px 30px 20px 30px;
     display: grid;
-    grid-template-columns: 40vw 51vw;
+    grid-template-columns: 40vw 50vw;
     grid-template-rows: auto ;
     background-color: #495E57;
     column-gap: 4vw;

@@ -11,7 +11,7 @@
 @media screen and (max-width: 800px) {
     header>.LogoImage{
         margin-top: 5px;
-        width: 27vw;
+        width: 26vw;
         height: 45px;
         align-self: flex-start;
     }

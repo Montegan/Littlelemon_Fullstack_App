@@ -3,8 +3,9 @@ import { useFormik } from "formik";
 import { LogInshcema } from "../Components/schema/Inputshcema";
 import Header from "../Components/Header/Header";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./registration.css";
+
 function Login({loggedin,setLoggedin}) {
   const [loginstatus, setloginStatus] = useState("");
   const navigate = useNavigate();
@@ -103,6 +104,10 @@ function Login({loggedin,setLoggedin}) {
             Login
           </button>
         </form>
+        <span style={{fontSize:"20px"}}>Don't have an acoount?
+        <Link  to={"/Register"}> Register </Link>
+        instead
+        </span>
       </div>
     </>
   );

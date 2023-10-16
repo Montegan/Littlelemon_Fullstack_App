@@ -14,8 +14,33 @@ nav{
     list-style:none;
 }
 .navbar-Item{
-font-size: 1em;
-margin-right: 5px;
+font-size: 1.2em;
+margin-right: 0px;
+cursor: pointer;
+}
+
+.showHidden{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 99, 71, 0.851);
+    font-size:1.2em;
+    display: block;
+    position: absolute;
+    top:10vh;
+    right:0vw;
+}
+.hideDisplay{
+display: none;
+}
+
+.navbar-Itemlink {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(22, 111, 4);
+}
+.navbar-Itemlink:hover{
+    color: rgb(114, 119, 18);
 }
 .Burger-Item{
     font-family: 'karla','Times New Roman', Times;
@@ -24,17 +49,21 @@ margin-right: 5px;
     margin-top: 20px;
 }
 
-.Burger-Item:hover{
-  color: rgb(228, 228, 126);
-}
-.Burger-Itemlink{
+.Burger-Itemlink {
     text-decoration: none;
     color: blueviolet;
-}
-.Burger-Itemlink:visited{
     cursor: pointer;
+}
+
+.Burger-Itemlink:visited{
+ cursor: pointer;
   color: rgb(22, 111, 4);
 }
+
+.Burger-Itemlink:hover{
+    color: rgb(114, 119, 18);
+  }
+
 .burgerButton{
 height: 40px;
 width: 40px;
@@ -56,18 +85,18 @@ width: 90%;
 }
 @media  screen and (max-width:1000px) {
 .navbar-Item{
-    font-size: 0.9em;
+    font-size: 1em;
 }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width:800px) {
     nav{
         margin-right: 0px;
-        width: 30vw;
+        width: 28vw;
     }
     .burgerButton{
         position: relative;
-        left:23vw;
+        left:20vw;
         top:0px
         }
 }

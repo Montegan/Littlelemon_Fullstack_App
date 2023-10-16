@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import "./Header.css";
 import Burgermenu from "../Navbar/Burgermenu";
 
-function Header() {
+function Header({firstLoad}) {
   const useWindowWide = (size) => {
     const [width, setWidth] = useState(0);
 
@@ -28,7 +28,7 @@ function Header() {
   // if(useWindowWide(800)){
   // console.log("screen size is detected")
   // }
-  const screenSize = useWindowWide(800);
+  const screenSize = useWindowWide(801);
   return (
     <header className="Headercontainer">
       <img
@@ -38,7 +38,7 @@ function Header() {
         width="150px"
         alt=" Little Lemon Logo "
       />
-      <nav>{screenSize ? <Burgermenu /> : <Navbar></Navbar>}</nav>
+      <nav>{screenSize ? <Burgermenu /> : <Navbar firstLoad={firstLoad}></Navbar>}</nav>
     </header>
   );
 }

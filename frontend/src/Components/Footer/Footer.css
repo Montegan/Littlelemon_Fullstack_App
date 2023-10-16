@@ -38,7 +38,25 @@ color: #FDF4EE;
 }
 .footerNavItem{
  width: 100%;
- font-size: 0.9em;
+ font-size: 1em;
+}
+
+.footer-Itemlink{
+    color: #FDF4EE;
+text-decoration: none;
+}
+
+.footer-Itemlink:hover{
+    color: #eef58f;
+}
+
+li>a{
+    text-decoration: none;
+    color:#FDF4EE ;
+}
+li>a:hover{
+    text-decoration:underline;
+    color:#eef58f ;
 }
 .footerNavItem:hover{
     color: #eef58f;
@@ -82,13 +100,13 @@ flex-direction: column;
 @media screen and (max-width:800px) {
     .footerContainer{
         grid-template-columns: 27vw 21vw 21vw 21vw;
-        grid-template-rows: 30vh;
+        grid-template-rows: 40vh;
     }
     .fotterHeaders{
         font-size: 1.1em;
     }
     .footerNavItem{
-        font-size: 0.70em;
+        font-size: 0.90em;
        }
     .LogoImage{
      width: 20vw;

@@ -12,16 +12,14 @@ function Navbar({firstLoad}) {
     {firstLoad ? <ul className='navbar-items-wraper'>
         <li className= 'navbar-Item' onClick={handleClick}  >Home</li>
         <li className='navbar-Item' onClick={handleClick} >Menu</li>
-        <li className='navbar-Item' onClick={handleClick} >ContactUs</li>
         <li className='navbar-Item' onClick={handleClick}>Reservations </li>
         <li className='navbar-Item' onClick={handleClick} >Aboutus  </li>
         <li className='navbar-Item'><Link to='/Register' className='navbar-Itemlink' >Login/sinup</Link> </li>
         <span className={clicked ? "showHidden" : "hideDisplay" }>Please,Login or register first</span>
     </ul>:
     <ul className='navbar-items-wraper'>
-        <li className='navbar-Item'><Link to='/' className='navbar-Itemlink'>Home</Link></li>
+        <li className='navbar-Item'><Link to='/Homepage' className='navbar-Itemlink'>Home</Link></li>
         <li className='navbar-Item'><Link to='/Fullmenu' className='navbar-Itemlink' >Menu</Link></li>
-        <li className='navbar-Item'><Link to='/ContactUs' className='navbar-Itemlink' >ContactUs</Link></li>
         <li className='navbar-Item'><Link to='/Reservetable' className='navbar-Itemlink' >Reservations</Link> </li>
         <li className='navbar-Item'><Link to='/AboutUs' className='navbar-Itemlink'>Aboutus</Link>  </li>
         <li className='navbar-Item'><Link to='/Register' className='navbar-Itemlink' >Login/sinup</Link>  </li>

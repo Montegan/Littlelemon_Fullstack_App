@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Footer.css'
-function Footer() {
+function Footer({firstLoad}) {
   return (
     <section aria-labelledby='ContactusHeader'  className='footerContainer'>
     <div className='LogoImage'>
@@ -9,6 +9,15 @@ function Footer() {
     </div>
 
     <div>
+    { firstLoad ?
+    <ul className='footerNavUl'>
+        <li className='footerNavItem'>Home</li>
+        <li className='footerNavItem'>Menu</li>
+        <li className='footerNavItem'>ContactUs</li>
+        <li className='footerNavItem'>Reservations </li>
+        <li className='footerNavItem'>Aboutus</li>
+        <li className='footerNavItem'>Login/sinup  </li>
+    </ul> :
     <ul className='footerNavUl'>
         <li className='footerNavItem'><Link to='/' className='footer-Itemlink'>Home</Link></li>
         <li className='footerNavItem'><Link to='/Fullmenu' className='footer-Itemlink' >Menu</Link></li>
@@ -17,7 +26,7 @@ function Footer() {
         <li className='footerNavItem'><Link to='/AboutUs' className='footer-Itemlink'>Aboutus</Link>  </li>
         <li className='footerNavItem'><Link to='/Register' className='footer-Itemlink' >Login/sinup</Link>  </li>
     </ul>
-
+    }
     </div>
     <div className='listHeaderWraper'>
     <h1 id='ContactusHeader' className='fotterHeaders'>

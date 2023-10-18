@@ -1,6 +1,5 @@
 import "./App.css";
 import Homepage from "./Pages/Homepage";
-import ContactUs from "./Pages/ContactUs";
 import AboutUs from "./Pages/AboutUs";
 import Reservetable from "./Pages/Reservetable";
 import Fullmenu from "./Pages/Fullmenu";
@@ -19,12 +18,14 @@ function App() {
   const [loggedin,setLoggedin]=useState(false);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:3000/userData")
-      .then((res) => {
-        console.log(res.data);
-        return setformData(res.data);
-      })
+    axios.get("http://localhost:4000/reservaions")
+       .then((res)=>{setformData(res.data);
+      console.log("my data" + res.data)
+      }
+      //  (ReservationInfo) => {
+      //   console.log(JSON.parse(ReservationInfo));
+      //   setformData(JSON.parse(ReservationInfo));
+      )
       .catch((err) => console.log(err));
 
     setClicked(false);
@@ -78,7 +79,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element= {<MiniHomepage/>} />
-        <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/Homepage" element= {<Homepage/>} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route
           path="/Reservetable"

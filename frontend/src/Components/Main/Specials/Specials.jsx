@@ -1,11 +1,13 @@
 import React from 'react';
 import './specials.css';
-function Specials() {
+import { useNavigate } from 'react-router-dom';
+function Specials({firstLoad}) {
+  const navigate= useNavigate();
   return (
     <section aria-labelledby='SpecialsID' id="OrderOnline" className='SpecialsSection'>
             <div className='SpecialsTitleContainer'>
             <h1 id="SpecialsID"> This weeks specials!</h1>
-            <button type='button' className='showMenuButton'> Show full menu</button>
+            <button type='button' className='showMenuButton' onClick={()=> firstLoad ? navigate("/Register") : navigate("/Fullmenu") }> Show full menu</button>
             </div>
 
             <div className='MenuContanier'>
@@ -16,7 +18,7 @@ function Specials() {
             </div>
             <p className='foodDescription'>We are a family owned Mediterranean restaurant,
             Focused on traditional recipes served with a modern twist</p>
-            <button type='button' className='orderButton'>Order a delivery </button>
+            <button type='button' className='orderButton' onClick={()=> firstLoad ? navigate("/Register") : navigate("/Fullmenu") }>Order a delivery </button>
             </div>
 
             <div className='MenuContanier'>
@@ -27,7 +29,7 @@ function Specials() {
             </div>
             <p className='foodDescription'>We are a family owned Mediterranean restaurant,
             Focused on traditional recipes served with a modern twist</p>
-            <button type='button' className='orderButton'>Order a delivery </button>
+            <button type='button' className='orderButton' onClick={()=> firstLoad ? navigate("/Register") : navigate("/Fullmenu") }>Order a delivery </button>
             </div>
 
             <div className='MenuContanier'>
@@ -38,7 +40,7 @@ function Specials() {
             </div>
             <p className='foodDescription'>We are a family owned Mediterranean restaurant,
             Focused on traditional recipes served with a modern twist</p>
-            <button type='button' className='orderButton'>Order a delivery </button>
+            <button type='button' className='orderButton' onClick={()=> firstLoad ? navigate("/Register") : navigate("/Fullmenu") }>Order a delivery </button>
             </div>
         </section>
   )

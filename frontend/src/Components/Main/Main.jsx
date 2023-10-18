@@ -4,11 +4,11 @@ import Testimonials from './Testimonials/Testimonials';
 import Aboutus from './Aboutus/Aboutus';
 import Herosection from './Herosection/Herosection';
 import Specials from './Specials/Specials';
-function Main() {
+function Main({firstLoad}) {
   return (
     <main>
-        <Herosection/>
-        <Specials/>
+        <Herosection firstLoad={firstLoad}/>
+        <Specials firstLoad={firstLoad}/>
         <Testimonials/>
         <Aboutus/>
     </main>

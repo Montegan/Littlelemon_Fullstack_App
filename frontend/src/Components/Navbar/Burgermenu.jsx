@@ -15,7 +15,6 @@ function Burgermenu() {
           </button>
         <li className="Burger-Item"><Link to='/' className="Burger-Itemlink">Home</Link></li>
         <li className="Burger-Item"><Link to='/Fullmenu' className="Burger-Itemlink" >Menu</Link></li>
-        <li className="Burger-Item"><Link to='/ContactUs' className="Burger-Itemlink" >ContactUs</Link></li>
         <li className="Burger-Item"><Link to='/Reservetable' className="Burger-Itemlink" >Reservations</Link> </li>
         <li className="Burger-Item"><Link to='/AboutUs' className="Burger-Itemlink">Aboutus</Link>  </li>
         <li className="Burger-Item"><Link to='/Register' className="Burger-Itemlink">Login/sinup</Link>  </li>

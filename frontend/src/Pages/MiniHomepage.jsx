@@ -6,8 +6,8 @@ function MiniHomepage() {
   return (
     <>
     <Header firstLoad= "firstload" />
-    <Main/>
-    <Footer/>
+    <Main firstLoad= "miniHome"/>
+    <Footer firstLoad="miniHome"/>
     </>
   )
 }

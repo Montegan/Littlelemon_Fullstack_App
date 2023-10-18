@@ -20,7 +20,7 @@ router.post("/registered", async (req, res) => {
   res.end();
 });
 
-router.post("/users", async(req, res) => {
+router.post("/users", async (req, res) => {
   //   const userData = [
   //     {
   //       hello: "world",
@@ -33,10 +33,35 @@ router.post("/users", async(req, res) => {
     password: req.body.password,
   });
   if (verifyresult) {
-    return res.send({message:"Success"});
-  }else{
-    return res.send({message:"Failed"});
+    return res.send({ message: "Success" });
+  } else {
+    return res.send({ message: "Failed" });
   }
+});
+
+router.post("/reservaions", async (req, res) => {
+  //console.log(req.body)
+  const { Date, Time, GuestNumber, Occasion, freeTime } = req.body;
+  const ReserveData = {
+    Date: Date,
+    Time: Time,
+    GuestNumber: GuestNumber,
+    Occasion: Occasion,
+    freeTime: freeTime,
+  };
+  const newReservations = new myScehmas.Resrvations(ReserveData);
+  const saveReservations = await newReservations.save();
+  if (saveReservations) {
+    res.send("message recieved");
+  }
+  res.end();
+});
+
+router.get("/reservaions",  (req, res) => {
+
+   myScehmas.Resrvations.find()
+    .then((ReservationInfo) => res.json(ReservationInfo))
+    .catch((err) => console.log(err));
 });
 
 module.exports = router;

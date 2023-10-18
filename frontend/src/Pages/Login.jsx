@@ -17,7 +17,7 @@ function Login({loggedin,setLoggedin}) {
           setloginStatus(res.data.message);
           setLoggedin(true)
           actions.resetForm();
-          navigate("/");
+          navigate("/Homepage");
         } else if ("Failed" === res.data.message) {
           setloginStatus("Login not succeful, Please check your credentials");
         }

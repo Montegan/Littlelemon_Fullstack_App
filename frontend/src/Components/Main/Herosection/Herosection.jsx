@@ -1,6 +1,8 @@
 import React from 'react'
 import './Herosection.css'
-function Herosection() {
+import { useNavigate } from 'react-router-dom'
+function Herosection({firstLoad}) {
+   const navigate = useNavigate();
   return (
         <section aria-labelledby='HeroTitle' id='heroID' className='HeroSection'>
             <div className='heroTitleContainer'>
@@ -8,7 +10,7 @@ function Herosection() {
             <h2 className='heroSubTitle'>UAE</h2>
             <p className='heroDescription'>We are a family owned Mediterranean restaurant,
             Focused on traditional recipes served with a modern twist</p>
-            <button type='button' className='ReserveButton'>Reserve Table</button>
+            <button type='button' className='ReserveButton' onClick={()=> firstLoad ? navigate("/Register") : navigate("/Reservetable") }>Reserve Table</button>
             </div>
             <div className='HeroImgContainer'>
             <img className='HeroImg' src={require('../../../Assets/restaurant chef B.jpg')}  alt='banner of little lemon'/>

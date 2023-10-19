@@ -10,21 +10,22 @@ import { useState, useReducer, useEffect } from "react";
 import ConfirmedBooking from "./Components/ConfirmedBooking/ConfirmedBooking";
 import axios from "axios";
 import MiniHomepage from "./Pages/MiniHomepage";
+import Notfoundpage from "./Pages/Notfoundpage";
 
 function App() {
   const [formdata, setformData] = useState([]);
   const [submitted, setSubmitted] = useState(false);
   const [clicked, setClicked] = useState(false);
-  const [loggedin,setLoggedin]=useState(false);
+  const [loggedin, setLoggedin] = useState(false);
 
   useEffect(() => {
-    axios.get("http://localhost:4000/reservaions")
-       .then((res)=>{setformData(res.data);
-      console.log("my data" + res.data)
-      }
-      //  (ReservationInfo) => {
-      //   console.log(JSON.parse(ReservationInfo));
-      //   setformData(JSON.parse(ReservationInfo));
+    axios
+      .get("http://localhost:4000/reservaions")
+      .then(
+        (res) => {
+          setformData(res.data);
+          console.log("my data" + res.data);
+        }
       )
       .catch((err) => console.log(err));
 
@@ -78,8 +79,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element= {<MiniHomepage/>} />
-        <Route path="/Homepage" element= {<Homepage/>} />
+        <Route path="/" element={<MiniHomepage />} />
+        <Route path="/Homepage" element={<Homepage />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route
           path="/Reservetable"
@@ -99,61 +100,14 @@ function App() {
         <Route path="/Confirmed" element={<ConfirmedBooking />} />
         <Route path="/Fullmenu" element={<Fullmenu />} />
         <Route path="/Register" element={<Register />} />
-        <Route path="/loginpage" element={<Login loggedin={loggedin}
-              setLoggedin={setLoggedin}  />} />
+        <Route
+          path="/loginpage"
+          element={<Login loggedin={loggedin} setLoggedin={setLoggedin} />}
+        />
+        <Route path="*" element={<Notfoundpage />} />
       </Routes>
     </>
   );
 }
 export default App;
 
-// if (formdata.length === 0) {
-//   console.log(action.payload);
-//   return TimeList;
-// } else if (formdata.length !== 0) {
-//   if (action.payload in formdata){
-//   const selectedDate = formdata.filter(
-//     (items) => action.payload === items.Date
-//     );
-//   const Selectedtime = formdata.map((items) => {
-//     let tt;
-//     if (action.payload === items.Date) {tt=items.Time}
-//     return tt;
-//   });
-//   console.log(selectedDate)
-//   // let mm;
-//   // if (action.payload === selectedDate[0].Date){
-//   //   mm= TimeList.filter((time) => time !== Selectedtime)}
-//   // else {
-//   //     mm=TimeList
-//   //   }
-//   // return ["1","2","3"];
-// }else{
-//   return ["1","2","3"];
-// }
-//(TimeList.filter((time)=> time !== BookingDetails.Time ));
-// //let timed;
-// if(action.payload === items.Date){
-//   return timed = TimeList.filter((time)=> time !== items.Time);
-// }
-// else if (action.payload !== items.Date){
-//   return timed=TimeList}
-// return TimeList=timed;
-
-
- //["17:00",
-        // "18:00",
-        // "19:00",
-        // "20:00",
-        // "21:00",
-        // "22:00"]
-        // console.log(bep)
-        // console.log(Temp);
-        //console.log(selectedDate[0].Date)
-        //console.log(action.payload)
-        // const availableTime= selectedDate.map((items)=>{
-        //   // console.log(items.Time)
-        //   // console.log(Temp)
-        //  return (cap.pop()).filter((time) => time !== items.Time)
-        // })
-        //console.log("available= " + availableTime[1])

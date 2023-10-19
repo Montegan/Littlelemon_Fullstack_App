@@ -42,6 +42,33 @@ display: none;
 .navbar-Itemlink:hover{
     color: rgb(114, 119, 18);
 }
+.active{
+    text-shadow: 2px 2px 8px rgb(223, 219, 5);
+    color: rgb(50, 18, 119);
+}
+.showCheck{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows:auto 5vh;
+    column-gap: 20px;
+    position: absolute;
+    background-color: tomato;
+    padding: 10px;
+    border-radius: 8px;
+    right: 0;
+    top: 75px;
+}
+.yesNoButtons{
+    border:none;
+    border-radius: 9px;
+    padding: 5px;
+}
+.hideCheck{
+    display: none;
+}
+.headerLogout{
+grid-column: span 2;
+}
 .Burger-Item{
     font-family: 'karla','Times New Roman', Times;
     align-self: center;

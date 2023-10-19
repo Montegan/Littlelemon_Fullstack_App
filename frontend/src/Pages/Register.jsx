@@ -1,5 +1,5 @@
 import React from "react";
-import { useFormik } from "formik";
+import { replace, useFormik } from "formik";
 import { Inputshcema } from "../Components/schema/Inputshcema";
 import Header from "../Components/Header/Header";
 import "./registration.css";
@@ -15,7 +15,7 @@ function Register() {
       .catch((err) => console.log(err));
     console.log(values);
     actions.resetForm();
-    navigate("/loginpage");
+    navigate("/loginpage",{replace:true});
   };
   const {
     values,
@@ -130,7 +130,7 @@ function Register() {
           </button>
         </form>
         <span style={{fontSize:"20px"}}>Have an acoount?
-        <Link  to={"/loginpage"}> login </Link>
+        <Link  to={"/loginpage"} > login </Link>
         instead
         </span>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useFormik } from "formik";
+import { replace, useFormik } from "formik";
 import { LogInshcema } from "../Components/schema/Inputshcema";
 import Header from "../Components/Header/Header";
 import axios from "axios";
@@ -17,7 +17,7 @@ function Login({loggedin,setLoggedin}) {
           setloginStatus(res.data.message);
           setLoggedin(true)
           actions.resetForm();
-          navigate("/Homepage");
+          navigate("/Homepage", {replace:true});
         } else if ("Failed" === res.data.message) {
           setloginStatus("Login not succeful, Please check your credentials");
         }

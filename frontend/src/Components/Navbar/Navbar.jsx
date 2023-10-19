@@ -1,28 +1,35 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 function Navbar({firstLoad}) {
 
   const [clicked,setClicked]=useState(false)
+  const [checking,setChecking]=useState(false)
+  const navigate= useNavigate();
   const handleClick=()=>{
     setClicked(!clicked)
   }
   return (
     <>
     {firstLoad ? <ul className='navbar-items-wraper'>
-        <li className= 'navbar-Item' onClick={handleClick}  >Home</li>
+        <li className= 'navbar-Item' onClick={handleClick} ><Link to='/' className='navbar-Itemlink'>Home</Link></li>
         <li className='navbar-Item' onClick={handleClick} >Menu</li>
         <li className='navbar-Item' onClick={handleClick}>Reservations </li>
         <li className='navbar-Item' onClick={handleClick} >Aboutus  </li>
-        <li className='navbar-Item'><Link to='/Register' className='navbar-Itemlink' >Login/sinup</Link> </li>
+        <li className='navbar-Item'><Link to='/Register'  className='navbar-Itemlink' >Login/sinup</Link> </li>
         <span className={clicked ? "showHidden" : "hideDisplay" }>Please,Login or register first</span>
     </ul>:
     <ul className='navbar-items-wraper'>
-        <li className='navbar-Item'><Link to='/Homepage' className='navbar-Itemlink'>Home</Link></li>
-        <li className='navbar-Item'><Link to='/Fullmenu' className='navbar-Itemlink' >Menu</Link></li>
-        <li className='navbar-Item'><Link to='/Reservetable' className='navbar-Itemlink' >Reservations</Link> </li>
-        <li className='navbar-Item'><Link to='/AboutUs' className='navbar-Itemlink'>Aboutus</Link>  </li>
-        <li className='navbar-Item'><Link to='/Register' className='navbar-Itemlink' >Login/sinup</Link>  </li>
+        <li className='navbar-Item'><NavLink  to='/Homepage' replace className='navbar-Itemlink'>Home</NavLink></li>
+        <li className='navbar-Item'><NavLink to='/Fullmenu'  className='navbar-Itemlink' >Menu</NavLink></li>
+        <li className='navbar-Item'><NavLink to='/Reservetable' className='navbar-Itemlink' >Reservations</NavLink> </li>
+        <li className='navbar-Item'><NavLink to='/AboutUs' className='navbar-Itemlink'>Aboutus</NavLink>  </li>
+        <li className='navbar-Item navbar-Itemlink' onClick={()=> setChecking(true)}  >Logout </li>
+        <div className={checking ? "showCheck" : "hideCheck"}>
+        <h1 className='headerLogout'>Are you sure you want to logout</h1>
+        <button className="yesNoButtons" onClick={()=>{navigate("/",{replace:true}); setChecking(false)}}>Yes</button>
+        <button className="yesNoButtons" onClick={()=> setChecking(false)}>No</button>
+         </div>
     </ul>}
     </>
   )

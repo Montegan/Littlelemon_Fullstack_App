@@ -6,10 +6,10 @@ function Notfoundpage() {
   useEffect(()=>{
     setTimeout(()=>navigate("/Homepage"),5000)
   },[])
- 
+
   return (
     <div className='ConfirmedMessage'> 404 Page not found
-    
+
     </div>
 
   )

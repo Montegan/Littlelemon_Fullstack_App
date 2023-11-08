@@ -11,7 +11,7 @@ function Login({loggedin,setLoggedin}) {
   const navigate = useNavigate();
   const onSubmit = async(values, actions) => {
     axios
-      .post("http://localhost:4000/users", values)
+      .post("https://final-deploy-d74j.onrender.com/users", values)
       .then((res) => {
         if ("Success" === res.data.message) {
           setloginStatus(res.data.message);

@@ -10,7 +10,7 @@ function Register() {
   const onSubmit = async (values, actions) => {
     // await new Promise((resolve) => setTimeout(resolve, 3000));
     axios
-      .post("http://localhost:4000/registered", values)
+      .post("https://final-deploy-d74j.onrender.com/registered", values)
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
     console.log(values);

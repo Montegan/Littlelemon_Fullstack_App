@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/reservaions")
+      .get("https://final-deploy-d74j.onrender.com/reservaions")
       .then(
         (res) => {
           setformData(res.data);

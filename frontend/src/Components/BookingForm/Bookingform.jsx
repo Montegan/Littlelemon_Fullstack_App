@@ -26,7 +26,7 @@ function Bookingform({
     // setformData([...formdata, BookingDetails]);
     const uploadable = BookingDetails;
     axios
-      .post("http://localhost:4000/reservaions", uploadable)
+      .post("https://final-deploy-d74j.onrender.com/reservaions", uploadable)
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
 

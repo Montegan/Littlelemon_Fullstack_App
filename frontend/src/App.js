@@ -12,11 +12,13 @@ import axios from "axios";
 import MiniHomepage from "./Pages/MiniHomepage";
 import Notfoundpage from "./Pages/Notfoundpage";
 
+
 function App() {
   const [formdata, setformData] = useState([]);
   const [submitted, setSubmitted] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [loggedin, setLoggedin] = useState(false);
+  
 
   useEffect(() => {
     axios
@@ -31,6 +33,9 @@ function App() {
 
     setClicked(false);
   }, [clicked]);
+
+ 
+  
 
   const Change_time = (TimeList, action) => {
     const selectedDate = formdata.filter(
@@ -76,11 +81,17 @@ function App() {
     }
   }, [submitted]);
 
+  const [randomuser,setrandomeuser]= useState([])
+  useEffect(()=>{
+    axios.get("https://randomuser.me/api/?results=3")
+    .then(res=> setrandomeuser(res.data.results))
+  },[])
+
+console.log(randomuser)
   return (
-    <>
       <Routes>
-        <Route path="/" element={<MiniHomepage />} />
-        <Route path="/Homepage" element={<Homepage />} />
+        <Route path="/" element={<MiniHomepage randomuser={randomuser}/>} />
+        <Route path="/Homepage" element={<Homepage randomuser={randomuser} />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route
           path="/Reservetable"
@@ -106,7 +117,6 @@ function App() {
         />
         <Route path="*" element={<Notfoundpage />} />
       </Routes>
-    </>
   );
 }
 export default App;

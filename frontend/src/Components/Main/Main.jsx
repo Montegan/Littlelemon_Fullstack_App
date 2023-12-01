@@ -4,12 +4,12 @@ import Testimonials from './Testimonials/Testimonials';
 import Aboutus from './Aboutus/Aboutus';
 import Herosection from './Herosection/Herosection';
 import Specials from './Specials/Specials';
-function Main({firstLoad}) {
+function Main({firstLoad,randomuser}) {
   return (
     <main>
         <Herosection firstLoad={firstLoad}/>
         <Specials firstLoad={firstLoad}/>
-        <Testimonials/>
+        <Testimonials randomuser={randomuser}/>
         <Aboutus/>
     </main>
   )

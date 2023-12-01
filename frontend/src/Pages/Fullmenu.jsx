@@ -1,15 +1,18 @@
-import React from 'react'
-import Specials from '../Components/Main/Specials/Specials'
+import React, { useContext, useEffect } from 'react'
+import MenuItems from '../Components/FullmenuItems/MenuItems'
 import Header from '../Components/Header/Header'
 import Footer from '../Components/Footer/Footer'
+import { MenuContextProvider } from '../helpers/contexts/Menucontext'
+
 
 function Fullmenu() {
+
   return (
-  <>
+    <MenuContextProvider>
       <Header/>
-     <Specials/>
-     <Footer/>
-  </>
+      <MenuItems/>
+      <Footer/>
+    </MenuContextProvider>
   )
 }
 
